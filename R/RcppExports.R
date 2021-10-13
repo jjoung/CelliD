@@ -16,3 +16,4 @@ MCAStep2 <- function(Z, V, Dc) {
 SparseMCAStep1 <- function(X) {
     .Call('_CellID_SparseMCAStep1', PACKAGE = 'CellID', X)
 }
+
