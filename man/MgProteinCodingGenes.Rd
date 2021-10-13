@@ -4,7 +4,9 @@
 \name{MgProteinCodingGenes}
 \alias{MgProteinCodingGenes}
 \title{Mus Musculus Protein Coding Genes}
-\format{A list of 3857 gene onthology terms with the corresponding genes.}
+\format{
+A list of 3857 gene onthology terms with the corresponding genes.
+}
 \source{
 \url{http://software.broadinstitute.org/gsea/msigdb/collections.jsp#C5}
 }

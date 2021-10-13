@@ -4,8 +4,16 @@
 \alias{DimPlotMC}
 \title{Seurat DimPlot for MCA like Dimensionality Reduction}
 \usage{
-DimPlotMC(X, reduction = "mca", dims = c(1, 2), features = NULL,
-  size.feature = 2, size.feature.text = 5, as.text = FALSE, ...)
+DimPlotMC(
+  X,
+  reduction = "mca",
+  dims = c(1, 2),
+  features = NULL,
+  size.feature = 2,
+  size.feature.text = 5,
+  as.text = FALSE,
+  ...
+)
 }
 \arguments{
 \item{X}{a seurat object}

@@ -8,12 +8,24 @@
 \usage{
 RunMCTSNE(X, reduction, dims, features, reduction.name, ...)
 
-\method{RunMCTSNE}{Seurat}(X, reduction = "mca", dims = seq(50),
-  features = NULL, reduction.name = "mctsne",
-  assay = DefaultAssay(X), ...)
+\method{RunMCTSNE}{Seurat}(
+  X,
+  reduction = "mca",
+  dims = seq(50),
+  features = NULL,
+  reduction.name = "mctsne",
+  assay = DefaultAssay(X),
+  ...
+)
 
-\method{RunMCTSNE}{SingleCellExperiment}(X, reduction = "MCA",
-  dims = seq(50), features = NULL, reduction.name = "MCTSNE", ...)
+\method{RunMCTSNE}{SingleCellExperiment}(
+  X,
+  reduction = "MCA",
+  dims = seq(50),
+  features = NULL,
+  reduction.name = "MCTSNE",
+  ...
+)
 }
 \arguments{
 \item{X}{Seurat or SingleCellExperiment object}

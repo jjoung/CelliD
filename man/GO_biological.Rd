@@ -4,7 +4,9 @@
 \name{GO_biological}
 \alias{GO_biological}
 \title{Biological Process GO Terms}
-\format{A list of 3857 gene onthology terms with the corresponding genes.}
+\format{
+A list of 3857 gene onthology terms with the corresponding genes.
+}
 \source{
 \url{http://software.broadinstitute.org/gsea/msigdb/collections.jsp#C5}
 }

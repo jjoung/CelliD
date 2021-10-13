@@ -3,21 +3,35 @@
 \name{RunMCA}
 \alias{RunMCA}
 \alias{RunMCA.matrix}
+\alias{RunMCA.dgCMatrix}
 \alias{RunMCA.Seurat}
 \alias{RunMCA.SingleCellExperiment}
 \title{Run Multiple Correspondence Analysis}
 \usage{
 RunMCA(X, nmcs, features, reduction.name, slot, ...)
 
-\method{RunMCA}{matrix}(X, nmcs = 50, features = NULL,
-  reduction.name = "MCA", ...)
+\method{RunMCA}{matrix}(X, nmcs = 50, features = NULL, reduction.name = "MCA", ...)
 
-\method{RunMCA}{Seurat}(X, nmcs = 50, features = NULL,
-  reduction.name = "mca", slot = "data", assay = DefaultAssay(X),
-  ...)
+\method{RunMCA}{dgCMatrix}(X, nmcs = 50, features = NULL, reduction.name = "MCA", ...)
 
-\method{RunMCA}{SingleCellExperiment}(X, nmcs = 50, features = NULL,
-  reduction.name = "MCA", slot = "logcounts", ...)
+\method{RunMCA}{Seurat}(
+  X,
+  nmcs = 50,
+  features = NULL,
+  reduction.name = "mca",
+  slot = "data",
+  assay = DefaultAssay(X),
+  ...
+)
+
+\method{RunMCA}{SingleCellExperiment}(
+  X,
+  nmcs = 50,
+  features = NULL,
+  reduction.name = "MCA",
+  slot = "logcounts",
+  ...
+)
 }
 \arguments{
 \item{X}{Seurat, SingleCellExperiment or matrix object}
@@ -26,9 +40,9 @@ RunMCA(X, nmcs, features, reduction.name, slot, ...)
 
 \item{features}{character vector of feature names. If not specified all features will be taken.}
 
-\item{reduction.name}{name of the reduction default set to "MCA" for SingleCellExperiment and mca}
+\item{reduction.name}{name of the reduction default set to 'MCA' for SingleCellExperiment and mca}
 
-\item{slot}{Which slot to pull expression data from?}
+\item{slot}{Which slot to pull expression data from? Default to logcounts for SingleCellExperiment and data for Seurat.}
 
 \item{...}{other aruments passed to methods}
 
@@ -38,7 +52,17 @@ RunMCA(X, nmcs, features, reduction.name, slot, ...)
 Seurat or SCE object with MCA calculation stored in the reductions slot.
 }
 \description{
-Run Multiple Correspondence Analysis
+RunMCA allows to compute the Multiple Corespondence Analysis on the single cell data contained in Seurat or SingleCellExperiment. 
+MCA is a statistical technique close to PCA that provides a simultaneous 
+representation of observations (e.g. cells) and variables (e.g. genes) in low-dimensional space.
+The barycentric relation among cells and genes is a distinctive feature of MCA biplots 
+and represents a major advantage as compared to other types of biplots such as those produced by Principal Component Analysis 
+as well as over alternative low-dimensional transformations providing only cell projections. 
+Thus, in the MCA biplot, analytical distances can be calculated not only between cells and between genes, 
+but also between each cell and each gene in order to estimate its association. 
+Thus, the closer a gene g is to a cell c, the more specific to such a cell it can be considered. 
+Gene-to-cell distances can then be ranked for each individual cell, 
+and the top-ranked genes may be regarded as a unique gene signature representing the identity card of the cell.
 }
 \examples{
 seuratPbmc <- RunMCA(seuratPbmc, nmcs = 5)

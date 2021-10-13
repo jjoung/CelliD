@@ -8,11 +8,21 @@
 \usage{
 GetCellGeneRanking(X, reduction, dims, features, cells)
 
-\method{GetCellGeneRanking}{Seurat}(X, reduction = "mca",
-  dims = seq(50), features = NULL, cells = NULL)
+\method{GetCellGeneRanking}{Seurat}(
+  X,
+  reduction = "mca",
+  dims = seq(50),
+  features = NULL,
+  cells = NULL
+)
 
-\method{GetCellGeneRanking}{SingleCellExperiment}(X, reduction = "MCA",
-  dims = seq(50), features = NULL, cells = NULL)
+\method{GetCellGeneRanking}{SingleCellExperiment}(
+  X,
+  reduction = "MCA",
+  dims = seq(50),
+  features = NULL,
+  cells = NULL
+)
 }
 \arguments{
 \item{X}{Seurat or SingleCell Experiment Object}

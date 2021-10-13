@@ -8,11 +8,9 @@
 \usage{
 GetCellGeneDistance(X, reduction, dims, features, cells)
 
-\method{GetCellGeneDistance}{Seurat}(X, reduction = "mca", dims,
-  features = NULL, cells = NULL)
+\method{GetCellGeneDistance}{Seurat}(X, reduction = "mca", dims, features = NULL, cells = NULL)
 
-\method{GetCellGeneDistance}{SingleCellExperiment}(X, reduction = "MCA",
-  dims, features = NULL, cells = NULL)
+\method{GetCellGeneDistance}{SingleCellExperiment}(X, reduction = "MCA", dims, features = NULL, cells = NULL)
 }
 \arguments{
 \item{X}{Seurat or SingleCell Experiment Object}

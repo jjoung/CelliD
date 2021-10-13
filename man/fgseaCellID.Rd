@@ -4,8 +4,14 @@
 \alias{fgseaCellID}
 \title{reworked fgsea for ram and speed efficiency in CellID}
 \usage{
-fgseaCellID(pathways, stats, nperm = 1000, minSize = 10,
-  maxSize = 500, gseaParam = 0)
+fgseaCellID(
+  pathways,
+  stats,
+  nperm = 1000,
+  minSize = 10,
+  maxSize = 500,
+  gseaParam = 0
+)
 }
 \arguments{
 \item{pathways}{List of gene sets to check}

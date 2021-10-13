@@ -8,11 +8,23 @@
 \usage{
 checkCellIDArg(X, group.by, reduction, dims, features, cells)
 
-\method{checkCellIDArg}{Seurat}(X, group.by = NULL, reduction, dims,
-  features = NULL, cells = NULL)
+\method{checkCellIDArg}{Seurat}(
+  X,
+  group.by = NULL,
+  reduction,
+  dims,
+  features = NULL,
+  cells = NULL
+)
 
-\method{checkCellIDArg}{SingleCellExperiment}(X, reduction, dims,
-  features = NULL, cells = NULL, group.by = NULL)
+\method{checkCellIDArg}{SingleCellExperiment}(
+  X,
+  reduction,
+  dims,
+  features = NULL,
+  cells = NULL,
+  group.by = NULL
+)
 }
 \arguments{
 \item{X}{Seurat or SingleCell Experiment Object}

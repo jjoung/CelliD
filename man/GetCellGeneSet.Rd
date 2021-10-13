@@ -8,11 +8,23 @@
 \usage{
 GetCellGeneSet(X, reduction = "mca", dims, features, cells, n.features)
 
-\method{GetCellGeneSet}{Seurat}(X, reduction = "mca", dims = seq(50),
-  features = NULL, cells = NULL, n.features = 200)
+\method{GetCellGeneSet}{Seurat}(
+  X,
+  reduction = "mca",
+  dims = seq(50),
+  features = NULL,
+  cells = NULL,
+  n.features = 200
+)
 
-\method{GetCellGeneSet}{SingleCellExperiment}(X, reduction = "MCA",
-  dims = seq(50), features = NULL, cells = NULL, n.features = 200)
+\method{GetCellGeneSet}{SingleCellExperiment}(
+  X,
+  reduction = "MCA",
+  dims = seq(50),
+  features = NULL,
+  cells = NULL,
+  n.features = 200
+)
 }
 \arguments{
 \item{X}{Seurat or SingleCell Experiment Object}
