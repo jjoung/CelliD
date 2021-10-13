@@ -80,3 +80,4 @@ importFrom(utils, menu)
 importFrom(utils, setTxtProgressBar)
 importFrom(utils, txtProgressBar)
 useDynLib(CellID)
+NULL
